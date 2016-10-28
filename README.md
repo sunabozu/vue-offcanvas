@@ -3,7 +3,7 @@
 > A simple offcanvas sidebar for Vue.js (compatible with Vue 2.x)
 
 ## Links
-- [Demo](http://sunabozu.github.io/vue-offcanvas/)
+- [Demo](https://jsbin.com/lihagap/edit?html,output)
 
 It's built as UMD module, so you can use it in any way you want.
 
@@ -62,7 +62,6 @@ In your template:
 Property | Default | Description
 -------- | ------ | -----------
 width | 270 | Width of the sidebar
-placeholder | any text | A regular placeholder
 duration | 0.2 | Duration of the slide-in/slide-out animation
 effect | linear| A timing function for the `transition-timing-function` css property; you can also use the custom `bounce` value
 close-on-external-click | true | Should the sidebar be closed on a click outside it?
