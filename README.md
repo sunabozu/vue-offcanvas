@@ -57,6 +57,8 @@ In your template:
 </vue-offcanvas>
 ```
 
+**WARNING**: do not use the `style` attribute on the root element (`vue-offcanvas` in this case). Use css classes instead.
+
 ## Properties
 
 Property | Default | Description
