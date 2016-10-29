@@ -11,6 +11,11 @@ export default {
       type: Boolean
     },
 
+    align: {
+      type: String,
+      default: 'left'
+    },
+
     width: {
       type: Number,
       default: 270
@@ -42,12 +47,23 @@ export default {
       setTimeout(() => this.toggle(val))
     },
 
-    'duration' (val) {
+    'duration' () {
       this.setupBody({})
     },
 
-    'effect' (val) {
+    'effect' () {
       this.setupBody({})  
+    }
+  },
+
+  computed: {
+    hor() {
+      return this.align === 'right' ? { right: 0 } :
+        { left: 0 }
+    },
+
+    widthCustom() {
+      return this.align === 'right' ? this.width : -this.width
     }
   },
 
@@ -84,7 +100,7 @@ export default {
 
     toggle(show) {
       if(show) {
-        document.body.style.transform = `translateX(${this.width}px)`
+        document.body.style.transform = `translateX(${-this.widthCustom}px)`
         this.visible = true
       } else {
         this.$emit('input', false)
@@ -117,8 +133,8 @@ export default {
 
 <template>
   <div
-    style="position: fixed; left: 0; top: 0; bottom: 0; height: 100vh;"
-    :style="{ 'width': width + 'px', 'transform': `translateX(-${width}px)` }">
+    style="position: fixed; top: 0; bottom: 0; height: 100vh;"
+    :style="[hor, { 'width': width + 'px', 'transform': `translateX(${widthCustom}px)` }]">
     <slot v-if="visible"></slot>
   </div>
 </template>

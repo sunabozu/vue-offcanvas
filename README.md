@@ -63,6 +63,7 @@ In your template:
 
 Property | Default | Description
 -------- | ------ | -----------
+align | left | Position of the sidebar (`left` or `right`)
 width | 270 | Width of the sidebar
 duration | 0.2 | Duration of the slide-in/slide-out animation
 effect | linear| A timing function for the `transition-timing-function` css property; you can also use the custom `bounce` value
