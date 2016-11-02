@@ -31,6 +31,10 @@ export default {
       default: 'linear'
     },
 
+    overflowHidden: {
+      default: true,
+    },
+
     closeOnExternalClick: {
       type: Boolean,
       default: true
@@ -82,7 +86,9 @@ export default {
       }
 
       document.body.style.transition = `transform ${duration}s ${timingFunction}`
-      document.body.style.overflowX = 'hidden'
+
+      if(this.overflowHidden)
+        document.body.style.overflowX = 'hidden'
     },
 
     clickOutside(e) {
