@@ -1,5 +1,9 @@
 # vue-offcanvas
 
+forked from https://github.com/sunabozu/vue-offcanvas
+
+منو کناری  vue
+
 > A simple offcanvas sidebar for Vue.js (compatible with Vue 2.x)
 
 ## Links
