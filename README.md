@@ -1,6 +1,6 @@
 # vue-offcanvas
 
-> A simple offcanvas sidebar for Vue.js (compatible with Vue 2.x)
+> A simple offcanvas sidebar for Vue.js (compatible with Vue >= 2.0.6)
 
 ## Links
 - [Demo](https://jsbin.com/lihagap/edit?html,output)
