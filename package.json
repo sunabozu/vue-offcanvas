@@ -23,14 +23,14 @@
   },
   "homepage": "https://github.com/sunabozu/vue-offcanvas#readme",
   "devDependencies": {
-    "babel-loader": "^6.2.5",
-    "babel-plugin-transform-object-assign": "^6.8.0",
-    "babel-preset-es2015": "^6.14.0",
-    "css-loader": "^0.25.0",
-    "vue": "^2.0.0-rc.6",
-    "vue-loader": "^9.5.0",
-    "vue-style-loader": "^1.0.0",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.1"
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-es2015": "^6.24.0",
+    "css-loader": "^0.28.0",
+    "vue": "^2.2.0",
+    "vue-loader": "^11.2.0",
+    "vue-style-loader": "^4.0.0",
+    "vue-template-compiler": "^2.5.0",
+    "webpack": "^3.11.0"
   }
 }
