@@ -1,14 +1,19 @@
-const webpack = require('webpack')
-
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: './src/vue-offcanvas.vue',
+  entry: path.resolve(__dirname + '/src/vue-offcanvas.vue'),
 
   output: {
-    path: '.',
+    path: path.resolve(__dirname + '/'),
     filename: 'index.js',
     library: 'VueOffcanvas',
     libraryTarget: 'umd'
+  },
+
+  resolve: {
+    extensions: ['.js', '.vue']
   },
 
   externals: {
@@ -16,27 +21,21 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       }
     ]
   },
 
-  babel: {
-    presets: ['es2015'],
-    plugins: ['transform-object-assign']
-  },
-
   plugins: [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
+    new UglifyJsPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()
   ],
 }
